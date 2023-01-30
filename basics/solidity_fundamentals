@@ -1,0 +1,45 @@
+Variables 
+
+pragma solidity ^0.5.13;
+
+contract WorkingWithVariables {
+   // all numbers are zero by default
+   uint256 public myUint;
+   // booleans => defaults to false
+   bool public myBool;
+   
+   // in solidity uint8 is between 0 and 255
+   // that means if you decrement 0 you will immediately go to 255
+
+   // addresses in solidity
+   address myAddress;
+
+   function setMyAddress (address _myAddress) public {
+      myAddress = _myAddress;
+   }
+
+   // this function returns balance in wei the basic unit in solidity smallest unit.
+   function getBalanceOfAddress(address _address) public view returns(uint) {
+       return myAddress.balance;
+   }
+
+   function setMyUint (uint _myUint) public {
+      myUint = _myUint;
+   }
+   function setMyBool(bool _myBool) public {
+      myBool = _myBool
+   }
+}
+integers in solidity
+
+uint8 to uint256 in 8bit increment
+uint8 from 0 to 255;
+int8 -128 to 127;
+uint is an alias of uint256 with 2^256 values
+<--
+Fixed points or floats
+not implemented yet
+-->
+
+
+

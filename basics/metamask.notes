@@ -1,0 +1,10 @@
+Install metamask to experiment and develop applications on top of ethereum network
+
+don't use ethereum network use test networks to experiment with free tokens.
+to get free tokens use a faucet.
+
+you need a blockchain node to interact with the blockchain 
+
+   metamask => Infura (service with blockchain) => blockchain node.
+  (how we get free eths from a test network) faucet => backend (with private and public key to sign transaction) => blockchain node
+  

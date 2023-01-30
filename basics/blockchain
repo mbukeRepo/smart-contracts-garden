@@ -1,0 +1,54 @@
+System of recording transaction.
+These transactions are recorded on a public ledger and 
+this legder is distributed accross different nodes on the 
+network
+
+
+How transactions work. Each user has an address 
+an address is a public key with associated private key.
+
+public key: bank account number.
+private key: password of your bank account.
+
+To authorise the transaction you have to sign a digital signature. A way of 
+proving that you have a private key corresponding to the public key without
+having to reveal the private key.
+
+After authorizing the transaction the node you are connected on announces the 
+transaction to the bitcoin network.
+
+Then the miners take that transaction with others and make ablock 
+
+a block = transactions +  previous block identifier + proof of work
+proof of work = mathematical problem to solve. 
+
+Then the miner who solves the problem gets rewarded. thats the only way
+the bitcoin is created(mining rewards).
+
+The double spending problem this problem arises if you track transactions
+with a ledger. Some malicious actors can manipulate the ledger.
+
+In real world if you transact then the possession = ownership
+
+In ledger world possession != ownership. It's only on papers.
+
+Blockchain = public ledger of all bitcoin transactions.
+Transactions added on a blockchain are being processed by computer nodes on 
+a network .
+
+Transactions are chained in chronological order.
+
+Ethereum ecosystem no need of central entity. develop decentralized systems
+and make the code public to achive trustworthy.
+
+blockchain is part of web3.0 evolution of the internet.
+
+web3.0
+connective intelligence
+connecting data
+concept applications
+ultimately people
+
+achived by blockchain. => shared ledger no blocking.
+
+Why can't business documents be shared instead of getting transfered. 

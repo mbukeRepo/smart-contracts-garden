@@ -1,0 +1,45 @@
+Transaction:
+from
+to
+value
+gas: maximum amount of gas used
+gasPrice: amount of wei per gas
+
+How does the blockchain know that the transaction is not malicious.
+
+HOw does it know it's allowed to transfer value from account [from] to
+account [to]?
+
+Accounts and signing
+
+web3.eth.signTransaction({from, to, value}) => {v, r, s}
+
+Transaction.
+Private key(RANDOM 32 bit characters).
+<--
+Private => ECDSA => Public key (64 key) => Ethereum account(Keccak hash of
+last 20 bytes of the public key)
+
+Transaction + Private key => Signed transaction
+Signed Transaction(ECRecover) => Ethereum account + Public key.
+-->
+
+Key points
+Transaction signature ensure authenticity.
+Signatures are generated from private keys.
+public keys and addresses are generated from private keys and you can not reverse
+it.
+
+Keep you private key secure.
+
+Cryptographic hashing.
+
+Input => Hashing => Output.
+It's irreversible.
+It's one to one. every same input result into exact output.
+Change in input result in different output.
+
+# Block ===> Block
+
+=
+Hashing

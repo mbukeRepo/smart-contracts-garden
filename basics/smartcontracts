@@ -1,0 +1,50 @@
+Nick Szabo in 1994 is the one who coined this word.
+
+Piece of code running on the blockchain
+
+Smart contracts have state (state machine)
+You need transactions(methods) to change the state
+You can do logic operations
+
+State change happens through mining and transactions.
+
+We have many smart contract programming languages Vyper, Solidity, LLL
+all are compiled to EVM bytecode and then deployed.
+Every Ethereum node in the network executes the same code.
+
+Solidity:
+
+class like structure
+contains functions
+control structures if / else
+loops: for / while
+data types
+inheritable
+special structures like "modifires"
+
+Inside contracts we have
+=> Storage variables
+=> Events
+=> Modifiers
+=> Functions/constuctor
+
+They are running on the blockchain
+Deployed on EVM as bytecode
+They're turing complete
+
+Computer nodes on the blockchain know how to talk to each other because of
+the ethereum protocol that govern
+
+Blockchain networks
+
+Main network : where eths cost real money
+Robsten, Gorli (test networks): clones of the main network which are their
+for testing
+Developer networks: built to simulate main networks mainly used by developers
+for smart contract development and unit testing dapps.
+
+You can start your own private network(consortium network) using ethereum
+protocol and computer nodes store access and create data in same way.
+
+The first block in the private network (Ethereum network) is called the
+genesis block.

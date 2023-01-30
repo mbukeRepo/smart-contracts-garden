@@ -1,0 +1,22 @@
+==> traditional app
+
+database
+ |
+API
+ |
+Frontend
+
+
+==> dapp
+
+blockchain
+  |
+Smart contracts to interact with the blockchain
+  | 
+Blockchain
+
+
+Dapps are expensive because the code is executed on all nodes on the network
+and this is paid.
+
+

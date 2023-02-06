@@ -1,0 +1,41 @@
+every interaction on the blockchain is address based.
+address hold 20bytes value.
+
+used to transfer funds from smart contract to the address or from an address to
+smart contract.
+
+address
+ .transfer()
+ .send()
+ .call.value()
+ .delegateCall()
+
+ .balance() => Balance in wei.
+
+Transferring funds from smart contracts and address
+
+```solidity
+  pragma ^0.5.13;
+  
+  contract MyContract {
+     uint public balanceReceived;
+     function receiveMoney() public payable {
+        balanceReceived += msg.value;
+     }
+
+     function getBalance() public view returns(unint) {
+        return address(this).balance;
+     }
+
+     function withdraw() public {
+        address payable to = msg.sender; // address that called this smart contract.
+        to.transfer(this.getBalance());
+     }
+     
+     // sending money to an address
+     function withdrawMoneyTo(address payable to) public {
+        to.transfer(this.getBalance());
+     }
+  }
+```
+

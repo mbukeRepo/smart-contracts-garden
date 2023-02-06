@@ -1,0 +1,17 @@
+assert is used to validate invariants.
+require is used to validate user inputs.
+
+assert is triggered if:
+    out of index
+    division by zero
+    byteshifting by a negative amount.
+    convert a value too big or negative to enum.
+    zero initialized variable of type function type.
+
+require is triggered if:
+    where the condition evaluates to false.
+    function call via message call but doesn't finish properly.
+    external function call to a contract not containing any code.
+    your contract receiving ether without payable.
+    your contract receives ether at a getter function.
+    address.transfer() fails

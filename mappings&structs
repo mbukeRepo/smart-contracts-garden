@@ -1,0 +1,89 @@
+```solidity
+    contract Bank {
+        mapping (uint => bool) public myMapping;
+        mapping (address => bool) public blackListed;
+
+        function blackListOnCall() public {
+            blackListed[msg.sender] = true;
+        }
+    }
+```
+
+```solidity
+   contract Bank {
+
+        struct Payment {
+            uint amount;
+            uint timestamp;
+        };
+
+        struct Balance {
+            uint totalBalance;
+            uint numPayments;
+            mapping(uint => Payment) payments;
+        };
+
+        mapping (address => Balance) public balances;
+
+
+        function getBalance() public view  returns(int) {
+            return address(this).balance;
+        }
+
+        function deposit() public payable {
+            balances[msg.sender].totalBalance += msg.value;
+            Payment memory payment = Payment(msg.value, now);
+            balances[msg.sender].payments[balances[msg.sender].numPayments] = payment;
+            balances[msg.sender].numPayments += 1;  
+        }
+
+        function partialWithdraw(address payable _to, uint _amount) public {
+            require(balances[msg.sender].totalBalance >= _amount, "not enough funds");
+            balances[msg.sender].totalBalance -= _amount;
+            _to.transfer(_amount);
+        }
+
+        function withdrawAll(address payable _to) public {
+            const toWithdraw = balances[msg.sender].totalBalance;
+            balances[msg.sender].totalBalance = 0;
+            _to.transfer(toWithdraw);
+        }
+   }
+```
+
+Rule of thumb : always the interaction comes last and state change comes first.
+
+
+Mappings 
+
+Like hash maps.
+mapping(_keyType => _valueType) name;
+The _keyType can be elementary type. This can be any built in value
++ bytes and strings.
+_valueType can be any type including mapping and struct.
+
+
+Structs
+
+Allow you to create custom types
+Instead of creating new contracts and instantiating them use them for the sake of gas consumption
+Members of struct can not be of type struct 
+
+Arrays in solidity
+
+T[k] fixed size of type T with k elements
+T[] dynamic size of type T
+T[][5] 5 dynamic sized arrays(reverse notation)
+
+Have two Members
+length
+push
+
+Be careful with arrays because of gas costs.
+
+Enums
+
+```
+enum ActionChoices {GoLeft, GoRight};
+ActionChoice actionChoice;
+```

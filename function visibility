@@ -1,0 +1,11 @@
+public you can access this storage variables outside smart contract 
+even from derived contracts.
+
+private you can access these storage variables only within the smart
+contract. you can't access them in derived contracts.
+
+external functions can only be called outside the contract and other contract
+
+internal cannot be invoked by a transaction can only be called from 
+derived and internally.
+
